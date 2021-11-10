@@ -30,7 +30,6 @@ main{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid blue;
 }
 
 .calculator{
@@ -128,7 +127,7 @@ main{
 
 }
 
-input[type="button"], button {
+input[type="button"] {
 
     width: 4rem;
     height: 3rem;
@@ -143,9 +142,31 @@ input[type="button"], button {
 }
 
 
-input[type="button"]:hover, button:hover {
+input[type="button"]:hover {
 
     background: var(--Strong-cyan);
+}
+
+button{
+    
+    width: 4rem;
+    height: 3rem;
+    border-radius: 5px;
+    border: none;
+    background: var(--White);
+    color: var(--Strong-cyan);
+    font-size: 1.8rem;
+    font-family: var(--mono47);
+    font-weight: 700;
+    border: 1px solid var(--Strong-cyan);
+    cursor: pointer;
+}
+
+button:hover{
+
+    background: var(--Strong-cyan);
+    color: black;
+
 }
 
 .equals{
@@ -153,4 +174,15 @@ input[type="button"]:hover, button:hover {
     position: absolute;
     right: 6.4rem;
     bottom: 3.1rem;
+}
+
+@media screen and (width: 500px) {
+    
+    main{
+        padding: 1rem;
+    }
+    .calculator{
+
+        width: 100%;
+    }
 }
