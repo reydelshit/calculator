@@ -1,0 +1,156 @@
+:root{
+
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --dDark-grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --LLight-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --mono47: 'Space Mono', monospace;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    min-width: 100vw;
+    background: rgba(223, 220, 220, 0.52);;
+    overflow-x: hidden;
+    
+}
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid blue;
+}
+
+.calculator{
+
+    display: grid;
+    grid-template-rows: 1fr 20rem;
+    width: 25rem;
+    height: 30rem;
+    padding: 2rem;
+    background: var(--White);
+    border-radius: 10px;
+    position: relative;
+}
+
+.cal__result{
+
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    height: 4rem;
+    border: 1px solid var(--Strong-cyan);
+    background: var(--LLight-grayish-cyan);
+    border-radius: 15px;
+    
+    position: relative;
+
+}
+
+.cal__result #input__number{
+
+    display: flex;
+    text-align: end;
+    align-items: center;
+    padding: 0 1rem;
+    font-size: 2rem;
+    font-family: var(--mono47);
+    font-weight: 700;
+  
+  
+}
+
+.cal__result .input__result{
+
+    position: absolute;
+    right: 34px;
+    /* padding: 0 1rem; */
+    font-size: 2rem;
+    font-family: var(--mono47);
+    font-weight: 700;
+}
+
+.clear{
+
+    position: absolute;
+    right: 35px;
+    top: 6.5rem;
+    bottom: 0;
+    background: var(--Very-dark-cyan);
+    height: 2rem;
+    width: 5rem;
+    text-align: center;
+    color: var(--White);
+    font-size: 1.4rem;
+    font-family: var(--mono47);
+    font-weight: 700;
+}
+
+
+.calculator__container{
+
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+
+    position: relative;
+
+}
+
+.calculator__container .cal__top{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.operation{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+input[type="button"], button {
+
+    width: 4rem;
+    height: 3rem;
+    border-radius: 5px;
+    border: none;
+    background: var(--Very-dark-cyan);
+    color: var(--White);
+    font-size: 1.8rem;
+    font-family: var(--mono47);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+input[type="button"]:hover, button:hover {
+
+    background: var(--Strong-cyan);
+}
+
+.equals{
+
+    position: absolute;
+    right: 6.4rem;
+    bottom: 3.1rem;
+}
